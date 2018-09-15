@@ -47,4 +47,8 @@ export class RegisterPage implements OnInit {
     return await alert.present ();
   }
 
+  gotoLogin () {
+    console.log ('Go back to our login page...');
+  }
+
 }
