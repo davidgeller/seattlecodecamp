@@ -16,11 +16,11 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularCropperjsModule } from 'angular-cropperjs';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBbx0k_-UQ2fbTgIYNx0ww9bJjPwTUCTXo",
-  authDomain: "photograb-14821.firebaseapp.com",
-  databaseURL: "https://photograb-14821.firebaseio.com",
-  projectId: "photograb-14821",
-  storageBucket: "photograb-14821.appspot.com",
+  apiKey: "AIzaSyBbx0k_-UQ2fbTgXXXXXXXXXXPwTUCTXo",
+  authDomain: "photograb-XXXXXX.firebaseapp.com",
+  databaseURL: "https://photograb-XXXXX.firebaseio.com",
+  projectId: "photograb-XXXXX",
+  storageBucket: "photograb-XXXXX.appspot.com",
   messagingSenderId: "277595523941"
 };
 
