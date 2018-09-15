@@ -14,7 +14,7 @@ The specific technologies used in this project are:
 - the Angular Firebase package
 - the Angular CropperJS package
 
-An example of an app the author made using the same tools can be seen through the video ```Sample_Ionic_App.mp4```.
+An example of an app the author made using the same tools (though a previous version of Ionic) can be seen through the video ```Sample_Ionic_App.mp4```.
 
 View the presentation PDF (```Presentation.pdf```) for step-by-step instructions on creating this project. Alteratively, just download all the content, create your own Firebase account and replace the credentials stored in the file ```app.module.ts```.
 
