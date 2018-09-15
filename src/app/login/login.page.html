@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="welcome">
+    Welcome to Seattle Code Camp
+  </div>
+
+  <form [formGroup]="loginForm">
+
+    <ion-item>
+      <ion-label fixed>Email:</ion-label>
+      <ion-input formControlName="formUser" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Password:</ion-label>
+      <ion-input formControlName="formPassword" type="password"></ion-input>
+    </ion-item>
+
+    <div padding align="center">
+
+      <ion-button round (click)="login()">Login</ion-button>
+      <br>
+      <ion-button fill="clear" (click)="register()">Register</ion-button>
+      <ion-button fill="clear" (click)="resetPassword()">Forgot password?</ion-button>
+    </div>
+
+  </form>
+
+
+</ion-content>

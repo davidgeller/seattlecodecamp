@@ -1,0 +1,2 @@
+#!/bin/sh
+ionic serve --browser "Google Chrome"

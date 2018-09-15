@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PhotoCapture</ion-title>
+
+    <ion-buttons slot="start">
+        <ion-button (click)="cancel()">
+            Back
+        </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+        <ion-button (click)="acceptImage()">
+            <ion-icon *ngIf="image_captured" name="md-checkmark" color="primary"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div align="center">
+    <ion-button round (click)="capture()">
+      <ion-icon name="md-camera"></ion-icon>
+    </ion-button>
+  </div>
+
+
+  <div class="hidden_input">
+    <input #inputcamera type="file" accept="image/*" />
+  </div>
+
+  <div *ngIf="!img">
+
+    <ion-card style="border: 0px; box-shadow: 0 0px 0px;">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="1" class="bigBulbSpace">
+              <ion-icon ios="md-bulb" md="md-bulb" color="primary" class="bigBulb"></ion-icon>
+            </ion-col>
+            <ion-col>
+
+              <P class="text">
+                <strong>Press the camera button to take or select an image.</strong> After an
+                image has been captured or selected, and optionally cropped, you can save it
+                by pressing the checkmark in the upper right-hand corner.
+              </P>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+  <div *ngIf="!crop_image && displayCard()">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+
+          <ion-card *ngIf="!crop_image">
+            <img #imgresult [src]="img" />
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="crop_image && img">
+    <angular-cropper #angularCropper [cropperOptions]="cropperOptions" [imageUrl]="img"></angular-cropper>
+    <BR>
+    <div align="center">
+
+      <ion-button round (click)="cropReset()">Reset</ion-button>
+      <ion-button round (click)="cropRotate()">Rotate</ion-button>
+      <ion-button round (click)="cropZoom(true)">Zoom-In</ion-button>
+      <ion-button round (click)="cropZoom(false)">Zoom-Out</ion-button>
+
+      <BR>
+      <BR>
+      <ion-button round (click)="acceptImage()">Accept Image</ion-button>
+    </div>
+  </div>
+
+
+</ion-content>

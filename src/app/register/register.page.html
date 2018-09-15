@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="registerForm">
+
+    <ion-item>
+      <ion-label fixed>Email:</ion-label>
+      <ion-input formControlName="formUser" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Password:</ion-label>
+      <ion-input formControlName="formPassword" type="password"></ion-input>
+    </ion-item>
+
+    <div padding align="center">
+      <ion-button round color="primary" (click)="signup()">Register</ion-button>
+
+      <br>
+      <P>
+        Already have an account? <ion-badge (click)="gotoLogin()">Goto Login</ion-badge>
+      </P>
+    </div>
+  </form>
+
+
+</ion-content>
